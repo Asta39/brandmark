@@ -2,8 +2,10 @@ import { ServicesGrid } from "@/components/ServicesGrid";
 import { CTASection } from "@/components/CTASection";
 
 export const metadata = {
-  title: "Services | Brandmark Print Media",
-  description: "Branding & signage, digital & offset printing, large format, vehicle branding, DTF, UV printing, laser cutting and outdoor advertising.",
+  title: "Branding & Print Services in Nairobi | Brandmark Print Media",
+  description:
+    "Branding & signage, digital & offset printing, large format, vehicle branding, DTF, UV printing, laser cutting and outdoor advertising — all in-house in Nairobi, Kenya.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesIndexPage() {

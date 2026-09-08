@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { products } from "@/lib/data";
+import { products, services } from "@/lib/data";
 import { formatKsh } from "@/lib/whatsapp";
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductPurchasePanel } from "@/components/ProductPurchasePanel";
 import { ProductCard } from "@/components/ProductCard";
 import { Icon } from "@/components/Icon";
+import { ProductJsonLd, FaqJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -15,9 +16,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
   if (!product) return {};
+  const description = `${product.description} Order online with pickup or delivery in Nairobi, Kenya.`;
   return {
-    title: `${product.name} | Brandmark Print Media`,
-    description: product.description,
+    title: product.metaTitle,
+    description,
+    alternates: { canonical: `/products/${product.slug}` },
+    openGraph: {
+      title: product.metaTitle,
+      description,
+      images: [{ url: product.images[0] }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.metaTitle,
+      description,
+      images: [product.images[0]],
+    },
   };
 }
 
@@ -27,9 +41,20 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   if (!product) notFound();
 
   const related = products.filter((p) => p.category === product.category && p.slug !== product.slug).slice(0, 4);
+  const relatedService = services.find((s) => s.slug === product.relatedServiceSlug);
 
   return (
     <div className="mx-auto max-w-7xl px-5 pb-12 pt-28 md:px-8">
+      <ProductJsonLd product={product} />
+      <FaqJsonLd faqs={product.faqs} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Shop", url: "/shop" },
+          { name: product.category, url: "/shop" },
+          { name: product.name, url: `/products/${product.slug}` },
+        ]}
+      />
+
       <nav className="flex items-center gap-2 text-xs text-ink/50">
         <Link href="/shop" className="hover:text-ink">Shop</Link>
         <span>/</span>
@@ -99,6 +124,16 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               ))}
             </ul>
           </div>
+
+          {relatedService && (
+            <Link
+              href={`/services/${relatedService.slug}`}
+              className="mt-6 flex items-center justify-between rounded-2xl border border-orange/25 bg-orange/5 px-4 py-3.5 text-sm font-semibold text-ink transition hover:border-orange/50"
+            >
+              Need a custom or bulk order? See our {relatedService.name} service
+              <span aria-hidden>→</span>
+            </Link>
+          )}
         </div>
       </div>
 

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { services } from "@/lib/data";
+import { products, services } from "@/lib/data";
 import { Icon } from "@/components/Icon";
 import { ServiceInquiryForm } from "@/components/ServiceInquiryForm";
+import { ProductCard } from "@/components/ProductCard";
+import { ServiceJsonLd, FaqJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -13,9 +15,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const service = services.find((s) => s.slug === slug);
   if (!service) return {};
+  const description = `${service.description} Serving businesses across Nairobi, Kenya.`;
   return {
-    title: `${service.name} | Brandmark Print Media`,
-    description: service.description,
+    title: service.metaTitle,
+    description,
+    alternates: { canonical: `/services/${service.slug}` },
+    openGraph: {
+      title: service.metaTitle,
+      description,
+      images: [{ url: service.image }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: service.metaTitle,
+      description,
+      images: [service.image],
+    },
   };
 }
 
@@ -25,11 +40,23 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   if (!service) notFound();
 
   const others = services.filter((s) => s.slug !== service.slug);
+  const relatedProducts = (service.relatedProductSlugs ?? [])
+    .map((slug) => products.find((p) => p.slug === slug))
+    .filter((p): p is (typeof products)[number] => Boolean(p));
 
   return (
     <div>
+      <ServiceJsonLd service={service} />
+      <FaqJsonLd faqs={service.faqs} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Services", url: "/services" },
+          { name: service.name, url: `/services/${service.slug}` },
+        ]}
+      />
+
       <div className="relative h-[46vh] min-h-[320px] w-full overflow-hidden">
-        <Image src={service.image} alt={service.name} fill priority className="object-cover" />
+        <Image src={service.image} alt={`${service.name} in Nairobi — Brandmark Print Media`} fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/10" />
         <div className="absolute inset-0 flex flex-col justify-end px-5 pb-10 md:px-8">
           <div className="mx-auto w-full max-w-7xl">
@@ -42,7 +69,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange text-white">
                 <Icon name={service.icon} className="h-6 w-6" />
               </div>
-              <h1 className="text-3xl font-bold tracking-tight text-cream md:text-4xl">{service.name}</h1>
+              <h1 className="text-3xl font-bold tracking-tight text-cream md:text-4xl">{service.name} in Nairobi</h1>
             </div>
           </div>
         </div>
@@ -108,9 +135,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <>
                 <h2 className="mt-12 text-lg font-bold text-ink">Recent work</h2>
                 <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
-                  {service.gallery.map((src) => (
+                  {service.gallery.map((src, i) => (
                     <div key={src} className="relative aspect-square overflow-hidden rounded-xl border border-line bg-cream">
-                      <Image src={src} alt={service.name} fill sizes="25vw" className="object-cover" />
+                      <Image
+                        src={src}
+                        alt={`${service.name} in Nairobi — example ${i + 1} of recent work by Brandmark Print Media`}
+                        fill
+                        sizes="25vw"
+                        className="object-cover"
+                      />
                     </div>
                   ))}
                 </div>
@@ -134,6 +167,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
         </div>
+
+        {relatedProducts.length > 0 && (
+          <div className="mt-16 border-t border-line pt-10">
+            <h2 className="text-lg font-bold text-ink">Ready to order now</h2>
+            <p className="mt-1 text-sm text-ink/60">
+              Need a smaller batch or a one-off piece? These catalogue items ship without a custom quote.
+            </p>
+            <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
+              {relatedProducts.map((p) => (
+                <ProductCard key={p.slug} product={p} />
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-16 border-t border-line pt-10">
           <h2 className="text-lg font-bold text-ink">Other services</h2>

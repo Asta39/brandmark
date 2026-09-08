@@ -7,10 +7,13 @@ import { AboutSection } from "@/components/AboutSection";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { CTASection } from "@/components/CTASection";
+import { FaqJsonLd } from "@/components/JsonLd";
+import { faqs } from "@/lib/data";
 
 export default function Home() {
   return (
     <>
+      <FaqJsonLd faqs={faqs} />
       <Hero />
       <TrustBar />
       <ProductsPreview />

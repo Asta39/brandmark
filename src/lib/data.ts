@@ -4,6 +4,7 @@ export type Product = {
   category: string;
   price: number;
   badge?: "NEW" | "POPULAR" | "BEST SELLING";
+  metaTitle: string;
   description: string;
   longDescription: string;
   icon: string;
@@ -12,6 +13,7 @@ export type Product = {
   options: string[];
   useCases: string[];
   faqs: { q: string; a: string }[];
+  relatedServiceSlug?: string;
 };
 
 export const WHATSAPP_NUMBER = "254719855331";
@@ -19,6 +21,7 @@ export const WHATSAPP_NUMBER = "254719855331";
 export const products: Product[] = [
   {
     slug: "custom-dtf-tshirt",
+    metaTitle: "Custom DTF T-Shirt Printing in Nairobi | Brandmark Print Media",
     name: "Custom DTF T-Shirt",
     category: "Apparel Printing",
     price: 1200,
@@ -51,9 +54,11 @@ export const products: Product[] = [
       { q: "What if I don't have a t-shirt to print on?", a: "We stock plain tees in common sizes and colours, or you can supply your own garment." },
       { q: "How many washes will the print survive?", a: "40+ washes with normal care (cold wash, inside-out, avoid the tumble dryer)." },
     ],
+    relatedServiceSlug: "dtf-printing",
   },
   {
     slug: "branded-tote-bag",
+    metaTitle: "Branded Tote Bags Nairobi | Corporate Gifts — Brandmark",
     name: "Branded Reusable Tote Bag",
     category: "Promotional Materials",
     price: 800,
@@ -84,6 +89,7 @@ export const products: Product[] = [
   },
   {
     slug: "uv-printed-phone-case",
+    metaTitle: "UV-Printed Phone Cases Nairobi | Brandmark Print Media",
     name: "UV-Printed Phone Case",
     category: "UV Printing",
     price: 1500,
@@ -111,9 +117,11 @@ export const products: Product[] = [
       { q: "Does the print wear off with use?", a: "No — UV ink is cured directly into the case surface, so it resists scratching and daily handling far better than a sticker overlay." },
       { q: "Can I order a few different designs at once?", a: "Yes, add each design as a separate cart item with the quantity you need." },
     ],
+    relatedServiceSlug: "uv-printing",
   },
   {
     slug: "laser-cut-wall-art",
+    metaTitle: "Laser-Cut Wall Art Nairobi | Custom Wood Signage — Brandmark",
     name: "Laser-Cut Wooden Wall Art",
     category: "Laser Cutting",
     price: 3500,
@@ -142,9 +150,11 @@ export const products: Product[] = [
       { q: "How is it mounted on the wall?", a: "Each piece ships with wall-mount hardware fitted, ready to hang." },
       { q: "Can I get a custom size?", a: "Yes, sizes from 30cm up to 100cm are standard, and larger custom sizes are available on request." },
     ],
+    relatedServiceSlug: "laser-cutting-engraving",
   },
   {
     slug: "branded-umbrella",
+    metaTitle: "Branded Umbrellas Nairobi | Corporate Gifts — Brandmark",
     name: "Branded Umbrella",
     category: "Promotional Materials",
     price: 2200,
@@ -175,6 +185,7 @@ export const products: Product[] = [
   },
   {
     slug: "pull-up-banner",
+    metaTitle: "Custom Pull-Up Banner Nairobi | Brandmark Print Media",
     name: "Custom Pull-Up Banner",
     category: "Large Format Printing",
     price: 4500,
@@ -203,9 +214,11 @@ export const products: Product[] = [
       { q: "Can I reuse it for a different campaign?", a: "Yes, the stand hardware is reusable — only the printed panel needs replacing if your message changes." },
       { q: "Does it come with a carry case?", a: "Yes, every banner ships with a padded carry bag for transport between venues." },
     ],
+    relatedServiceSlug: "advertising-materials",
   },
   {
     slug: "branded-water-bottle",
+    metaTitle: "Branded Water Bottles Nairobi | Corporate Gifts — Brandmark",
     name: "Branded Water Bottle",
     category: "UV Printing",
     price: 900,
@@ -233,9 +246,11 @@ export const products: Product[] = [
       { q: "What colours are available?", a: "Matte black, white and silver are standard; other colours available for bulk orders." },
       { q: "Can I do a full-wrap design instead of just a logo?", a: "Yes, both a small logo placement and a full 360° wrap design are available." },
     ],
+    relatedServiceSlug: "uv-printing",
   },
   {
     slug: "custom-mug",
+    metaTitle: "Custom Printed Mugs Nairobi | Brandmark Print Media",
     name: "Custom Printed Mug",
     category: "UV Printing",
     price: 600,
@@ -263,9 +278,11 @@ export const products: Product[] = [
       { q: "What is the colour-changing option?", a: "A heat-reactive coating that reveals your design when hot liquid is poured in — a popular novelty upgrade." },
       { q: "Can I order just one as a gift?", a: "Yes, no minimum order — one mug costs the same per-unit as a bulk batch." },
     ],
+    relatedServiceSlug: "uv-printing",
   },
   {
     slug: "teardrop-flag",
+    metaTitle: "Teardrop Flag Banners Nairobi | Brandmark Print Media",
     name: "Teardrop Flag Banner",
     category: "Outdoor Advertising",
     price: 5500,
@@ -293,9 +310,11 @@ export const products: Product[] = [
       { q: "Can I print different messages on each side?", a: "Yes, double-sided flags can carry the same design mirrored or two different designs, front and back." },
       { q: "How is it transported?", a: "The pole breaks down into sections and packs into a slim carry bag with the flag and base." },
     ],
+    relatedServiceSlug: "advertising-materials",
   },
   {
     slug: "branded-cap",
+    metaTitle: "Branded Caps Nairobi | Corporate Gifts — Brandmark",
     name: "Branded Cap",
     category: "Promotional Materials",
     price: 700,
@@ -326,6 +345,7 @@ export const products: Product[] = [
   },
   {
     slug: "custom-notebook",
+    metaTitle: "Custom Notebooks Nairobi | Corporate Gifts — Brandmark",
     name: "Custom Notebook",
     category: "Promotional Materials",
     price: 850,
@@ -356,6 +376,7 @@ export const products: Product[] = [
   },
   {
     slug: "acrylic-signage-plaque",
+    metaTitle: "Laser-Cut Signage Plaques Nairobi | Brandmark Print Media",
     name: "Acrylic Signage Plaque",
     category: "Laser Cutting",
     price: 6000,
@@ -383,12 +404,14 @@ export const products: Product[] = [
       { q: "Does it come ready to mount?", a: "Yes, every plaque ships with wall standoffs fitted for a clean, floating installation." },
       { q: "Can you match our exact brand colours?", a: "Yes for printed finishes — send your Pantone, CMYK or HEX codes and we'll colour-match." },
     ],
+    relatedServiceSlug: "laser-cutting-engraving",
   },
 ];
 
 export type Service = {
   slug: string;
   name: string;
+  metaTitle: string;
   description: string;
   longDescription: string;
   extendedDescription: string;
@@ -401,11 +424,13 @@ export type Service = {
   gallery: string[];
   process: { title: string; body: string }[];
   faqs: { q: string; a: string }[];
+  relatedProductSlugs?: string[];
 };
 
 export const services: Service[] = [
   {
     slug: "branding-signage",
+    metaTitle: "Branding & Signage in Nairobi | Shopfront Signs — Brandmark",
     name: "Branding & Signage",
     description: "Shop fascias, illuminated signs, cut-out lettering and directional signage that make your storefront impossible to miss.",
     longDescription:
@@ -459,6 +484,7 @@ export const services: Service[] = [
   },
   {
     slug: "digital-offset-printing",
+    metaTitle: "Digital & Offset Printing in Nairobi | Brandmark Print Media",
     name: "Digital & Offset Printing",
     description: "Business cards, brochures, magazines and books — sharp, high-volume printing with fast turnaround.",
     longDescription:
@@ -506,6 +532,7 @@ export const services: Service[] = [
   },
   {
     slug: "large-format-screen-printing",
+    metaTitle: "Large Format & Screen Printing in Nairobi | Brandmark",
     name: "Large Format & Screen Printing",
     description: "Posters, banners and screen-printed apparel produced on our in-house large-format and screen printing lines.",
     longDescription:
@@ -554,9 +581,11 @@ export const services: Service[] = [
         a: "We regularly run up to 6 colours per design; more is possible but adds setup time and cost.",
       },
     ],
+    relatedProductSlugs: ["pull-up-banner"],
   },
   {
     slug: "car-fleet-branding",
+    metaTitle: "Car & Fleet Branding in Nairobi | Vehicle Wraps — Brandmark",
     name: "Car & Fleet Branding",
     description: "Full and partial vehicle wraps for cars, vans and trucks — durable branding that travels with your business.",
     longDescription:
@@ -604,6 +633,7 @@ export const services: Service[] = [
   },
   {
     slug: "dtf-printing",
+    metaTitle: "DTF Printing in Nairobi | No-Minimum Custom Shirts — Brandmark",
     name: "DTF / No-Cut Printing",
     description: "Direct-to-film transfers for apparel — full colour, no minimum quantity, durable through repeated washes.",
     longDescription:
@@ -652,9 +682,11 @@ export const services: Service[] = [
         a: "Correct — we print a single piece at the same per-unit setup cost as a bulk order, since there's no screen or plate to prepare.",
       },
     ],
+    relatedProductSlugs: ["custom-dtf-tshirt"],
   },
   {
     slug: "uv-printing",
+    metaTitle: "UV Printing in Nairobi | Custom Merchandise — Brandmark",
     name: "UV Printing",
     description: "Direct UV printing onto phone cases, bottles, plaques and promotional items for a premium, scratch-resistant finish.",
     longDescription:
@@ -699,9 +731,11 @@ export const services: Service[] = [
         a: "Yes, using a rotary jig we can produce clean wraparound prints on cylindrical items without visible seam stretching.",
       },
     ],
+    relatedProductSlugs: ["uv-printed-phone-case", "custom-mug", "branded-water-bottle"],
   },
   {
     slug: "laser-cutting-engraving",
+    metaTitle: "Laser Cutting & Engraving in Nairobi | Brandmark Print Media",
     name: "Laser Cutting & Engraving",
     description: "Precision-cut wood, acrylic and metal signage, awards and decor pieces engraved to exact specification.",
     longDescription:
@@ -750,9 +784,11 @@ export const services: Service[] = [
         a: "Yes — once the design and engraving text template are approved, we can produce dozens of consistent awards efficiently.",
       },
     ],
+    relatedProductSlugs: ["laser-cut-wall-art", "acrylic-signage-plaque"],
   },
   {
     slug: "advertising-materials",
+    metaTitle: "Pull-Up Banners & Event Branding in Nairobi | Brandmark",
     name: "Indoor / Outdoor Advertising",
     description: "Pull-up banners, teardrop flags, billboards and promotional giveaways for events, activations and everyday visibility.",
     longDescription:
@@ -797,6 +833,7 @@ export const services: Service[] = [
         a: "Yes, the weighted cross base is designed for outdoor stability; a ground spike option is also available for grass or soft ground.",
       },
     ],
+    relatedProductSlugs: ["pull-up-banner", "teardrop-flag"],
   },
 ];
 
