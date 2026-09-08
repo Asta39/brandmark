@@ -3,6 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Terms of Service | Brandmark Print Media",
   description: "Terms governing use of the Brandmark Print Media website, shop and quote requests.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

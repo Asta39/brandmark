@@ -4,6 +4,7 @@ export const metadata = {
     index: false,
     follow: true,
   },
+  alternates: { canonical: "/cart" },
 };
 
 export default function CartLayout({ children }: { children: React.ReactNode }) {
