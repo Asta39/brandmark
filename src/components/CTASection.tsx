@@ -6,8 +6,8 @@ export function CTASection() {
   const href = buildWhatsAppLink("Hi Brandmark Print Media, I'd like to discuss a project.");
   return (
     <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
-      <div className="relative overflow-hidden rounded-3xl wavy-bg px-6 py-16 text-center md:px-16 md:py-20">
-        <div className="absolute inset-0 bg-ink/85" />
+      <div className="relative overflow-hidden rounded-3xl silk-wave-bg px-6 py-16 text-center md:px-16 md:py-20">
+        <div className="absolute inset-0 bg-ink/35" />
         <div className="relative">
           <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-cream md:text-4xl">
             Where your ideas take flight. Let&apos;s create something amazing together.

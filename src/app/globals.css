@@ -38,6 +38,12 @@ body {
   background-position: center;
 }
 
+.silk-wave-bg {
+  background-image: url("/images/silk-wave-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 .section-line {
   border-color: var(--color-line);
 }
