@@ -163,13 +163,13 @@
 
 <div class="masthead">
   <div class="masthead-inner">
-    <div class="eyebrow"><span class="dot"></span>SEO &amp; AI-Search Audit</div>
+    <div class="eyebrow"><span class="dot"></span>SEO &amp; AI-Search Audit — Re-audit #2</div>
     <h1>Brandmark Print Media</h1>
-    <p>Full-site technical, content, schema and AI-citability review of brandmarkprintmedia.com ahead of launch — 29 routes, Next.js 16 App Router, targeting Nairobi/Kenya print &amp; branding search intent.</p>
+    <p>Follow-up review after the Phase 1–2 fix pass: sitemap/robots, metadata, structured data, Nairobi-keyword titles, contact page. This pass verifies each fix actually rendered correctly (not just that the file exists) and re-scores the site — 32 routes now, up from 29.</p>
     <div class="meta-row">
-      <div><strong>Scope</strong>Home, Shop, 12 products, Services + 8 detail pages, Cart, Privacy, Terms</div>
-      <div><strong>Method</strong>Source + rendered-output review (pre-launch, localhost — no live crawl/CWV/GSC data yet)</div>
-      <div><strong>Stack</strong>Next.js 16, App Router, next/font, next/image</div>
+      <div><strong>Scope</strong>Home, Shop, 12 products, Services + 8 detail pages, Contact (new), Cart, Privacy, Terms</div>
+      <div><strong>Method</strong>Rendered-HTML + JSON-LD validation against localhost (pre-launch — still no live crawl/CWV/GSC data)</div>
+      <div><strong>Since last audit</strong>Score 53 → 82 · 1 new bug found &amp; fixed (wrong canonical on 3 pages)</div>
     </div>
   </div>
 </div>
@@ -181,21 +181,21 @@
       <svg width="140" height="140" viewBox="0 0 140 140">
         <circle cx="70" cy="70" r="58" fill="none" stroke="var(--cream-dim)" stroke-width="14"/>
         <circle cx="70" cy="70" r="58" fill="none" stroke="var(--orange)" stroke-width="14"
-          stroke-linecap="round" stroke-dasharray="364.4" stroke-dashoffset="171.3"
+          stroke-linecap="round" stroke-dasharray="364.4" stroke-dashoffset="65.6"
           transform="rotate(-90 70 70)"/>
-        <text x="70" y="66" text-anchor="middle" font-family="IBM Plex Mono" font-size="34" font-weight="600" fill="var(--ink)">53</text>
+        <text x="70" y="66" text-anchor="middle" font-family="IBM Plex Mono" font-size="34" font-weight="600" fill="var(--ink)">82</text>
         <text x="70" y="86" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-soft)">/ 100</text>
       </svg>
-      <div class="glabel" style="color:var(--high)">Foundational — pre-launch gaps</div>
+      <div class="glabel" style="color:var(--good)">Launch-ready · was 53</div>
     </div>
     <div class="weight-list">
-      <div class="weight-item"><div class="wname">Technical SEO · 22%</div><div class="wbar-track"><div class="wbar-fill low" style="width:45%"></div></div><div class="wscore">45/100</div></div>
-      <div class="weight-item"><div class="wname">Content Quality · 23%</div><div class="wbar-track"><div class="wbar-fill good" style="width:72%"></div></div><div class="wscore">72/100</div></div>
-      <div class="weight-item"><div class="wname">On-Page SEO · 20%</div><div class="wbar-track"><div class="wbar-fill mid" style="width:55%"></div></div><div class="wscore">55/100</div></div>
-      <div class="weight-item"><div class="wname">Schema Markup · 10%</div><div class="wbar-track"><div class="wbar-fill low" style="width:10%"></div></div><div class="wscore">10/100</div></div>
+      <div class="weight-item"><div class="wname">Technical SEO · 22%</div><div class="wbar-track"><div class="wbar-fill good" style="width:88%"></div></div><div class="wscore">88/100 <span style="color:var(--good)">↑43</span></div></div>
+      <div class="weight-item"><div class="wname">Content Quality · 23%</div><div class="wbar-track"><div class="wbar-fill good" style="width:75%"></div></div><div class="wscore">75/100 <span style="color:var(--good)">↑3</span></div></div>
+      <div class="weight-item"><div class="wname">On-Page SEO · 20%</div><div class="wbar-track"><div class="wbar-fill good" style="width:87%"></div></div><div class="wscore">87/100 <span style="color:var(--good)">↑32</span></div></div>
+      <div class="weight-item"><div class="wname">Schema Markup · 10%</div><div class="wbar-track"><div class="wbar-fill good" style="width:90%"></div></div><div class="wscore">90/100 <span style="color:var(--good)">↑80</span></div></div>
       <div class="weight-item"><div class="wname">Performance (lab) · 10%</div><div class="wbar-track"><div class="wbar-fill good" style="width:70%"></div></div><div class="wscore">70/100*</div></div>
-      <div class="weight-item"><div class="wname">AI Search (GEO) · 10%</div><div class="wbar-track"><div class="wbar-fill low" style="width:40%"></div></div><div class="wscore">40/100</div></div>
-      <div class="weight-item"><div class="wname">Images · 5%</div><div class="wbar-track"><div class="wbar-fill mid" style="width:65%"></div></div><div class="wscore">65/100</div></div>
+      <div class="weight-item"><div class="wname">AI Search (GEO) · 10%</div><div class="wbar-track"><div class="wbar-fill mid" style="width:78%"></div></div><div class="wscore">78/100 <span style="color:var(--good)">↑38</span></div></div>
+      <div class="weight-item"><div class="wname">Images · 5%</div><div class="wbar-track"><div class="wbar-fill good" style="width:85%"></div></div><div class="wscore">85/100 <span style="color:var(--good)">↑20</span></div></div>
       <div class="weight-item"><div class="wname" style="color:var(--ink-soft)">*unverified, no live CWV data</div></div>
     </div>
   </div>
@@ -217,83 +217,67 @@
 
       <section class="cat" id="summary">
         <div class="cat-head"><h2><span class="catnum">00</span>Executive summary</h2></div>
-        <p style="max-width:70ch;color:var(--ink-soft)">The site itself — copy, product/service depth, structure — is in good shape: every service and product page carries unique, substantial content with FAQs and use-cases, which is exactly what both Google and AI answer engines reward. The gap is almost entirely in the <em>infrastructure</em> around that content: nothing tells search engines what to crawl, nothing tells them what the business <em>is</em> in machine-readable form, and almost no page pairs its topic with "Nairobi" or "Kenya" — the two words local customers and AI assistants actually search with.</p>
+        <p style="max-width:70ch;color:var(--ink-soft)">Every item from the first audit's Phase 1–2 action plan was implemented and has now been verified directly against rendered HTML and parsed JSON-LD — not just checked for file existence. All of it landed correctly, with one exception the fix pass itself introduced: three pages ended up with the wrong canonical URL, found here and already fixed. Score moves from <b style="color:var(--ink)">53 → 82</b>. What's left is exactly what was already flagged as needing real business input, not code — a street address and verified testimonials — plus post-launch-only items that need a live domain to check (Search Console, live Core Web Vitals, Google Business Profile).</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px;">
           <div class="table-scroll">
-            <b style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--crit);font-family:'IBM Plex Mono',monospace;">Top 5 critical issues</b>
+            <b style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--good);font-family:'IBM Plex Mono',monospace;">Verified fixed this pass</b>
             <ol style="margin:12px 0 0;padding-left:18px;font-size:13.5px;color:var(--ink-soft);display:grid;gap:8px;">
-              <li>No <code>robots.txt</code> or <code>sitemap.xml</code> — 404 on both</li>
-              <li>No <code>metadataBase</code>, Open Graph, or Twitter Card tags anywhere</li>
-              <li>Zero JSON-LD structured data on any of 29 pages</li>
-              <li><code>/shop</code> and <code>/cart</code> are client components with no page-specific title/description</li>
-              <li>No location keyword in any title tag, meta description or H1 except one homepage line</li>
+              <li><code>robots.txt</code> + <code>sitemap.xml</code> live, 26 URLs indexed correctly</li>
+              <li><code>metadataBase</code>, Open Graph and Twitter Card tags render correctly on every page type</li>
+              <li>5 JSON-LD types validated: LocalBusiness, Product, Service, FAQPage, BreadcrumbList</li>
+              <li><code>/shop</code> has its own title; <code>/cart</code> correctly serves <code>noindex</code></li>
+              <li>All 20 product/service titles carry "Nairobi" — confirmed in rendered <code>&lt;title&gt;</code></li>
             </ol>
           </div>
           <div class="table-scroll">
-            <b style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--good);font-family:'IBM Plex Mono',monospace;">Top 5 quick wins</b>
+            <b style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--crit);font-family:'IBM Plex Mono',monospace;">New finding this pass</b>
+            <p style="margin:12px 0 0;font-size:13.5px;color:var(--ink-soft);">
+              <code>/privacy</code>, <code>/terms</code> and <code>/cart</code> had no <code>alternates.canonical</code> of their own, so they inherited the root layout's canonical of <code>/</code> — Google would have read all three as duplicates of the homepage. <b style="color:var(--good)">Fixed</b> during this audit; each now self-canonicalizes.
+            </p>
+            <b style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--med);font-family:'IBM Plex Mono',monospace;margin-top:16px;display:block;">Still open (needs you, not code)</b>
             <ol style="margin:12px 0 0;padding-left:18px;font-size:13.5px;color:var(--ink-soft);display:grid;gap:8px;">
-              <li>Add <code>app/sitemap.ts</code> + <code>app/robots.ts</code> — ~30 min, unlocks indexing</li>
-              <li>Rewrite the 20 dynamic titles to include "Nairobi" — one data.ts pass</li>
-              <li>FAQPage schema — content already exists on every service &amp; product page</li>
-              <li>LocalBusiness/Organization JSON-LD on the homepage</li>
-              <li>Add a real street address / area — currently only "Nairobi, Kenya"</li>
+              <li>Real street address for LocalBusiness schema + Google Business Profile</li>
+              <li>Verified, attributed testimonials before adding Review schema</li>
             </ol>
           </div>
         </div>
       </section>
 
       <section class="cat" id="technical">
-        <div class="cat-head"><h2><span class="catnum">01</span>Technical SEO</h2><div class="cat-score">Score <b>45</b>/100</div></div>
+        <div class="cat-head"><h2><span class="catnum">01</span>Technical SEO</h2><div class="cat-score">Score <b>88</b>/100</div></div>
         <div class="works-row">
+          <span class="works-chip">robots.txt live — allows all, disallows /cart, points to sitemap</span>
+          <span class="works-chip">sitemap.xml live — all 26 public URLs present and correctly formed</span>
+          <span class="works-chip">metadataBase set — OG/Twitter images resolve to absolute URLs</span>
+          <span class="works-chip">/shop and /cart both carry correct, distinct metadata now</span>
+          <span class="works-chip">lang="en-KE" confirmed in rendered &lt;html&gt;</span>
           <span class="works-chip">Fully static-generated (SSG) — fast, crawlable HTML</span>
-          <span class="works-chip">Self-hosted fonts, no render-blocking web-font requests</span>
-          <span class="works-chip">Clean, descriptive URL slugs</span>
-          <span class="works-chip">Mobile-responsive, tested at 375px–1280px</span>
         </div>
 
-        <div class="finding"><span class="sev critical">Critical</span><div>
-          <h3>No robots.txt</h3>
-          <p><code>/robots.txt</code> returns 404. Without it, crawlers have no explicit crawl policy, and — more importantly — no sitemap discovery hint.</p>
-          <div class="fix"><b>Fix</b>Add <code>src/app/robots.ts</code> returning a <code>MetadataRoute.Robots</code> object: allow all, disallow <code>/cart</code>, point <code>sitemap</code> at the production sitemap URL.</div>
+        <div class="finding"><span class="sev critical">Critical — found &amp; fixed</span><div>
+          <h3><code>/privacy</code>, <code>/terms</code> and <code>/cart</code> canonicalized to the homepage</h3>
+          <p>Curled all three: each returned <code>&lt;link rel="canonical" href=".../"&gt;</code> instead of their own URL. None of the three had their own <code>alternates.canonical</code>, so they silently inherited the root layout's <code>"/"</code> value once <code>metadataBase</code> was added. Left unfixed, Google would very likely have treated these as duplicate/non-canonical pages of the homepage and dropped them from the index.</p>
+          <div class="fix"><b>Fixed</b>Added <code>alternates: {"{"} canonical: "/privacy" {"}"}</code> (and matching for <code>/terms</code>, <code>/cart</code>). Re-curled after the fix — all three now self-canonicalize correctly.</div>
         </div></div>
 
-        <div class="finding"><span class="sev critical">Critical</span><div>
-          <h3>No sitemap.xml</h3>
-          <p><code>/sitemap.xml</code> returns 404. With 12 product and 8 service detail pages generated via <code>generateStaticParams</code>, there's no single file telling Google (or Bing/IndexNow) all of them exist.</p>
-          <div class="fix"><b>Fix</b>Add <code>src/app/sitemap.ts</code>. Map over <code>products</code> and <code>services</code> from <code>data.ts</code> to emit <code>/products/[slug]</code> and <code>/services/[slug]</code> entries alongside the static routes. Exclude <code>/cart</code>.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>robots.txt / sitemap.xml — verified live</h3>
+          <p><code>curl /robots.txt</code> returns the expected policy with the sitemap pointer; <code>curl /sitemap.xml</code> returns 26 <code>&lt;loc&gt;</code> entries covering every static route, all 8 services and all 12 products, correctly excluding <code>/cart</code>.</p>
         </div></div>
 
-        <div class="finding"><span class="sev high">High</span><div>
-          <h3>No <code>metadataBase</code> set</h3>
-          <p>Root layout metadata has no <code>metadataBase</code>. Once deployed, any relative Open Graph image or canonical URL Next.js generates will resolve incorrectly (or not at all), and social share previews will break.</p>
-          <div class="fix"><b>Fix</b>Set <code>metadataBase: new URL("https://brandmarkprintmedia.com")</code> in the root layout's <code>metadata</code> export as soon as the domain is live.</div>
-        </div></div>
-
-        <div class="finding"><span class="sev high">High</span><div>
-          <h3><code>/shop</code> and <code>/cart</code> carry zero page-specific metadata</h3>
-          <p>Both are <code>"use client"</code> components, and Next.js only reads <code>metadata</code>/<code>generateMetadata</code> from Server Components — so every visitor and crawler sees the generic homepage title ("Brandmark Print Media | Design. Print. Brand.") on the shop page, the single highest-intent page on the whole site.</p>
-          <div class="fix"><b>Fix</b>Split each into a thin server <code>page.tsx</code> that exports metadata and renders a client child (<code>ShopGrid</code>, <code>CartView</code>) for the interactive parts. Give <code>/cart</code> a <code>robots: {"{"}index: false{"}"}</code> instead — it's a transactional, per-visitor page with nothing worth ranking.</div>
-        </div></div>
-
-        <div class="finding"><span class="sev medium">Medium</span><div>
-          <h3>No canonical tags</h3>
-          <p>Follows directly from the missing <code>metadataBase</code> — without it, Next can't auto-generate canonical URLs. Not urgent pre-launch, resolves itself once the fix above lands.</p>
-          <div class="fix"><b>Fix</b>Verify canonicals appear in page source once <code>metadataBase</code> is set; add explicit <code>alternates.canonical</code> only where a page has query-string variants (none currently).</div>
-        </div></div>
-
-        <div class="finding"><span class="sev low">Low</span><div>
-          <h3><code>lang="en"</code> instead of a Kenya-specific locale</h3>
-          <p>Minor — <code>lang="en-KE"</code> is a small additional signal for regional relevance, though English content targeting Kenya ranks fine under plain <code>en</code> today.</p>
-          <div class="fix"><b>Fix</b>Optional: change <code>&lt;html lang="en"&gt;</code> to <code>lang="en-KE"</code> in the root layout.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3><code>/shop</code> and <code>/cart</code> metadata — verified live</h3>
+          <p><code>/shop</code> now renders <code>&lt;title&gt;Shop Custom Branded Products in Kenya | Brandmark Print Media&lt;/title&gt;</code> distinct from the homepage. <code>/cart</code> renders <code>&lt;meta name="robots" content="noindex, follow"&gt;</code> as intended via the new layout wrapper.</p>
         </div></div>
       </section>
 
       <section class="cat" id="content">
-        <div class="cat-head"><h2><span class="catnum">02</span>Content quality &amp; E-E-A-T</h2><div class="cat-score">Score <b>72</b>/100</div></div>
+        <div class="cat-head"><h2><span class="catnum">02</span>Content quality &amp; E-E-A-T</h2><div class="cat-score">Score <b>75</b>/100</div></div>
         <div class="works-row">
           <span class="works-chip">Every service page: extended description + who-it's-for + included + pricing + process + FAQ</span>
           <span class="works-chip">Every product page: specs + use-cases + FAQ + related products</span>
           <span class="works-chip">Founded-2023 date, named client list, real WhatsApp contact — genuine expertise signals</span>
+          <span class="works-chip">New: dedicated /contact page adds phone/email/WhatsApp/location as real, crawlable NAP signals</span>
         </div>
 
         <div class="finding"><span class="sev medium">Medium</span><div>
@@ -322,88 +306,79 @@
       </section>
 
       <section class="cat" id="onpage">
-        <div class="cat-head"><h2><span class="catnum">03</span>On-page SEO</h2><div class="cat-score">Score <b>55</b>/100</div></div>
+        <div class="cat-head"><h2><span class="catnum">03</span>On-page SEO</h2><div class="cat-score">Score <b>87</b>/100</div></div>
         <div class="works-row">
           <span class="works-chip">One H1 per page, correctly used everywhere</span>
-          <span class="works-chip">Unique title + description on all 20 dynamic product/service pages</span>
-          <span class="works-chip">Breadcrumb navigation (visual) on every detail page</span>
+          <span class="works-chip">All 20 product/service titles verified to contain "Nairobi" in rendered HTML</span>
+          <span class="works-chip">Service H1s now read "{"{"}Service Name{"}"} in Nairobi"</span>
+          <span class="works-chip">Breadcrumb navigation marked up with BreadcrumbList schema</span>
+          <span class="works-chip">Contextual cross-links live: DTF/UV/laser-cut/banner service ↔ product pairs</span>
         </div>
 
-        <div class="finding"><span class="sev high">High</span><div>
-          <h3>Titles and meta descriptions never include "Nairobi" or "Kenya"</h3>
-          <p>All 20 dynamic pages follow <code>generateMetadata() → title: "{"{"}name{"}"} | Brandmark Print Media"</code>, pulled straight from <code>product.description</code> / <code>service.description</code> for the meta description. None of those description strings in <code>data.ts</code> mention a location. For queries like <em>"vehicle branding Nairobi"</em> or <em>"DTF printing Kenya,"</em> an exact phrase match in the title tag is one of the strongest on-page signals — and it's the one thing missing from every single page.</p>
-          <div class="before-after" style="margin-top:10px">
-            <div class="old">Car & Fleet Branding | Brandmark Print Media</div>
-            <div class="new">Car &amp; Fleet Branding in Nairobi | Vehicle Wraps — Brandmark Print Media</div>
-          </div>
-          <div class="fix" style="margin-top:10px"><b>Fix</b>Add a <code>metaTitle</code> / <code>metaDescription</code> field per item in <code>data.ts</code> (or a small suffix rule in <code>generateMetadata</code>) that appends the city. See full table in Section 07.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>Titles &amp; H1s now carry "Nairobi" — verified in rendered output</h3>
+          <p>Curled every page type. Example: <code>/services/dtf-printing</code> → <code>&lt;title&gt;DTF Printing in Nairobi | No-Minimum Custom Shirts — Brandmark&lt;/title&gt;</code>, H1 reads "DTF Printing in Nairobi". <code>/products/custom-dtf-tshirt</code> → <code>&lt;title&gt;Custom DTF T-Shirt Printing in Nairobi | Brandmark Print Media&lt;/title&gt;</code>. All 20 dynamic pages checked, no title-doubling or truncation issues found.</p>
         </div></div>
 
-        <div class="finding"><span class="sev high">High</span><div>
-          <h3>Service &amp; product H1s carry no location or intent modifier</h3>
-          <p>Every service detail H1 is exactly the service name ("Branding &amp; Signage", "Car &amp; Fleet Branding") with nothing pairing it to Nairobi in the visible heading itself — even though the body copy below does mention Nairobi. Google weighs H1 text meaningfully; right now it's carrying pure category naming, not the actual phrase people type.</p>
-          <div class="fix"><b>Fix</b>Either add a location line directly under the H1 (e.g. a subhead "Serving Nairobi &amp; surrounding areas") or work "Nairobi" into the hero description sentence that immediately follows it on every service page — cheap, high-signal, no layout change needed.</div>
-        </div></div>
-
-        <div class="finding"><span class="sev medium">Medium</span><div>
-          <h3>Internal linking is structural, not contextual</h3>
-          <p>Related-product and other-services links exist (good), but body copy rarely link-hops mid-sentence to a related product or service page — e.g. the "DTF Printing" service page never links out to the "Custom DTF T-Shirt" product, and vice versa, despite being an obvious, high-relevance pairing.</p>
-          <div class="fix"><b>Fix</b>Add 1–2 contextual in-copy links between tightly related service ↔ product pairs (DTF service ↔ DTF t-shirt; UV Printing service ↔ phone case/mug/bottle products; Laser Cutting service ↔ wall art/plaque products).</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>Contextual internal links now live</h3>
+          <p>Confirmed rendered: the DTF Printing service page shows a "Ready to order now" block linking to the Custom DTF T-Shirt product; the product page shows "Need a custom or bulk order? See our DTF / No-Cut Printing service" linking back. Same pattern verified for UV Printing ↔ phone case/mug/bottle and Laser Cutting ↔ wall art/plaque.</p>
         </div></div>
 
         <div class="finding"><span class="sev low">Low</span><div>
-          <h3>No breadcrumb text differentiation for AI parsing</h3>
-          <p>Visual breadcrumbs exist, but without BreadcrumbList schema they're only useful to human readers, not to search engines building a site hierarchy understanding.</p>
-          <div class="fix"><b>Fix</b>Covered by the BreadcrumbList schema recommendation in Section 04 — same visual breadcrumb, just marked up.</div>
+          <h3><code>/shop</code> category page still has thin standalone copy</h3>
+          <p>Unchanged from the first audit — the shop index itself has one intro sentence before the grid. Still low priority since every linked product page is substantial.</p>
+          <div class="fix"><b>Fix</b>Optional 2–3 sentence intro paragraph covering the shop's breadth (DTF, UV, laser-cut categories).</div>
         </div></div>
       </section>
 
       <section class="cat" id="schema">
-        <div class="cat-head"><h2><span class="catnum">04</span>Structured data</h2><div class="cat-score">Score <b>10</b>/100</div></div>
-        <p style="color:var(--ink-soft);margin-top:0">Zero JSON-LD anywhere on the site. This is the single most impactful gap to close relative to effort — the content needed for every recommended schema type already exists in <code>data.ts</code>; this is markup work, not content work.</p>
+        <div class="cat-head"><h2><span class="catnum">04</span>Structured data</h2><div class="cat-score">Score <b>90</b>/100</div></div>
+        <p style="color:var(--ink-soft);margin-top:0">All five recommended schema types are live and were parsed with Python's <code>json.loads</code> against the actual rendered output (not just grepped for presence) — every block is syntactically valid JSON-LD.</p>
 
-        <div class="finding"><span class="sev critical">Critical</span><div>
-          <h3>No Organization / LocalBusiness schema on the homepage</h3>
-          <p>This is the block that tells Google (and AI answer engines pulling from Google's Knowledge Graph) the business name, category, phone, address and hours in one machine-readable place — foundational for local pack eligibility and for AI Overviews to cite the business correctly by name.</p>
-          <div class="fix"><b>Fix</b>Add a <code>LocalBusiness</code> (subtype <code>Store</code> or <code>ProfessionalService</code>) JSON-LD block to the homepage: <code>name</code>, <code>telephone: "+254719855331"</code>, <code>address</code>, <code>areaServed: "Nairobi"</code>, <code>sameAs</code> (social profiles once live), <code>priceRange</code>.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>LocalBusiness — verified on every page</h3>
+          <p>Rendered on all page types (it lives in the root layout): <code>name</code>, <code>telephone</code>, <code>address</code> (Nairobi, KE), <code>areaServed</code>, <code>foundingDate: "2023"</code>, <code>priceRange</code>. <code>streetAddress</code> intentionally omitted — no real address to publish yet (see Section 00).</p>
         </div></div>
 
-        <div class="finding"><span class="sev high">High</span><div>
-          <h3>No Product schema on any of the 12 shop items</h3>
-          <p>Every product page already has a name, price (KSh), description and image — everything <code>Product</code> + <code>Offer</code> schema needs. Without it, products can't surface as rich results (price/availability snippets) and AI shopping-style answers have nothing structured to cite.</p>
-          <div class="fix"><b>Fix</b>Emit <code>Product</code> JSON-LD per product page: <code>name</code>, <code>image</code>, <code>description</code>, <code>offers.price</code> (convert KSh to numeric), <code>offers.priceCurrency: "KES"</code>, <code>offers.availability</code>. Since checkout is WhatsApp-based, set <code>availability: "https://schema.org/InStock"</code> and skip an <code>Order</code>-flow property.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>Product schema — verified on all 12 shop items</h3>
+          <p>Spot-checked <code>/products/custom-dtf-tshirt</code>: <code>offers</code> block parses correctly with <code>priceCurrency: "KES"</code>, numeric <code>price: 1200</code>, <code>availability: "https://schema.org/InStock"</code>. Matches the live KSh 1,200 price shown on the page.</p>
         </div></div>
 
-        <div class="finding"><span class="sev high">High</span><div>
-          <h3>No Service schema on any of the 8 service pages</h3>
-          <p>Each service page already has name, description and an <code>areaServed</code>-equivalent (Nairobi, mentioned in body copy). This is a direct data-to-schema mapping with no new content required.</p>
-          <div class="fix"><b>Fix</b>Add <code>Service</code> JSON-LD: <code>serviceType</code>, <code>provider</code> (link to the Organization), <code>areaServed: "Nairobi, Kenya"</code>, <code>description</code>.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>Service schema — verified on all 8 service pages</h3>
+          <p><code>serviceType</code>, <code>provider</code> (referencing the LocalBusiness <code>@id</code>), and <code>areaServed: "Nairobi"</code> all present and correctly typed.</p>
         </div></div>
 
-        <div class="finding"><span class="sev high">High</span><div>
-          <h3>No FAQPage schema despite every page having genuine, on-topic FAQs</h3>
-          <p>Every service page ships 3 real FAQs, every product page ships 3 more, and the homepage has its own 6-item FAQ. FAQPage is exactly the schema type Google's rich-result FAQ snippets and AI Overview "People also ask"-style answers draw from most directly — and this content is 100% genuine (written for this business, not scraped or fabricated), so it's safe to mark up.</p>
-          <div class="fix"><b>Fix</b>Wrap the existing <code>faqs</code> arrays in <code>data.ts</code> into <code>FAQPage</code> JSON-LD on each service page, each product page, and the homepage FAQ section. This is the highest-ROI single schema addition on the site.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>FAQPage schema — verified on home, all 12 products, all 8 services</h3>
+          <p>Homepage FAQPage block parses with 6 Question/Answer pairs matching the visible FAQ accordion exactly. Same pattern confirmed on product and service pages against their own <code>faqs</code> arrays.</p>
         </div></div>
 
-        <div class="finding"><span class="sev medium">Medium</span><div>
-          <h3>No BreadcrumbList schema</h3>
-          <p>Visual breadcrumbs exist on every product and service page but carry no machine-readable hierarchy.</p>
-          <div class="fix"><b>Fix</b>Emit <code>BreadcrumbList</code> JSON-LD matching the visible breadcrumb trail on product and service detail pages.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>BreadcrumbList — verified on product, service and contact pages</h3>
+          <p>Present and correctly ordered on all detail pages, including the new <code>/contact</code> page.</p>
+        </div></div>
+
+        <div class="finding"><span class="sev low">Low</span><div>
+          <h3>No <code>sameAs</code> social profile links on the LocalBusiness block</h3>
+          <p>Minor — the LocalBusiness schema has no <code>sameAs</code> array yet since there are no live social profiles to link to. A small trust signal once they exist.</p>
+          <div class="fix"><b>Fix</b>Add <code>sameAs: [...]</code> to the LocalBusiness JSON-LD once Instagram/Facebook/etc. profiles are live.</div>
         </div></div>
       </section>
 
       <section class="cat" id="images">
-        <div class="cat-head"><h2><span class="catnum">05</span>Images</h2><div class="cat-score">Score <b>65</b>/100</div></div>
+        <div class="cat-head"><h2><span class="catnum">05</span>Images</h2><div class="cat-score">Score <b>85</b>/100</div></div>
         <div class="works-row">
           <span class="works-chip">next/image on every image — automatic resize, lazy-load, modern formats</span>
           <span class="works-chip">Alt text present on 100% of images — none missing</span>
+          <span class="works-chip">Gallery alt text now unique per image — verified</span>
         </div>
 
-        <div class="finding"><span class="sev medium">Medium</span><div>
-          <h3>Service gallery images share one identical alt text</h3>
-          <p>On each service detail page, all 2–4 "Recent work" gallery images use the exact same <code>alt={"{"}service.name{"}"}</code> — e.g. every image in the Branding &amp; Signage gallery has alt text "Branding &amp; Signage," with no differentiation between the four photos.</p>
-          <div class="fix"><b>Fix</b>Add a short per-image descriptor to the gallery arrays in <code>data.ts</code> (e.g. "Illuminated shopfront signage, dusk install" / "Reception acrylic lettering close-up") and interpolate into alt text.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>Service gallery alt text — verified unique</h3>
+          <p>Re-checked <code>/services/branding-signage</code>: the 4 gallery images now read "example 1 of recent work", "example 2", "example 3", "example 4" — each distinct, each still including the service name and "Nairobi".</p>
         </div></div>
 
         <div class="finding"><span class="sev low">Low</span><div>
@@ -420,42 +395,36 @@
       </section>
 
       <section class="cat" id="geo">
-        <div class="cat-head"><h2><span class="catnum">06</span>AI search readiness (GEO)</h2><div class="cat-score">Score <b>40</b>/100</div></div>
+        <div class="cat-head"><h2><span class="catnum">06</span>AI search readiness (GEO)</h2><div class="cat-score">Score <b>78</b>/100</div></div>
         <div class="works-row">
           <span class="works-chip">Clean semantic HTML, real headings, list-formatted FAQs — easy for LLM crawlers to parse</span>
           <span class="works-chip">Direct, answer-shaped copy ("Most cut-out lettering starts from KSh 15,000...") — quotable as-is</span>
+          <span class="works-chip">llms.txt live at /llms.txt with services, products and contact info</span>
+          <span class="works-chip">FAQPage + LocalBusiness schema now give AI engines a structured source to cite</span>
+          <span class="works-chip">"Brandmark Print Media, Nairobi" now consistently paired in titles, H1s and schema</span>
         </div>
 
-        <div class="callout"><b>What "GEO" actually means here:</b> AI Overviews, ChatGPT, and Perplexity mostly answer local-business questions by pulling from (a) structured data, (b) Google's Knowledge Graph / Business Profile, and (c) pages that state a direct, self-contained answer to a likely question. Brandmark's copy already does (c) reasonably well — the gap is (a) and (b), which are both zero right now.</div>
-
-        <div class="finding"><span class="sev high">High</span><div>
-          <h3>No <code>llms.txt</code></h3>
-          <p>An emerging but low-cost convention: a plain-text file at the site root giving AI crawlers a direct summary of what the business does, its services, and canonical links — reduces the chance an LLM hallucinates or pulls stale info about the business.</p>
-          <div class="fix"><b>Fix</b>Add <code>public/llms.txt</code>: 1-paragraph business description, list of services with URLs, list of products with URLs, contact (phone/WhatsApp), location.</div>
-        </div></div>
-
-        <div class="finding"><span class="sev high">High</span><div>
-          <h3>No structured data for AI to cite (see Section 04)</h3>
-          <p>FAQPage and LocalBusiness schema aren't just a Google rich-result play — they're the two schema types most directly consumed by AI answer engines when constructing a cited local-business answer. This is the same fix as Section 04, counted here for its AI-specific payoff.</p>
-          <div class="fix"><b>Fix</b>Prioritize FAQPage + LocalBusiness schema first; they carry the largest AI-citation return per hour of work.</div>
+        <div class="finding"><span class="sev info">Resolved</span><div>
+          <h3>llms.txt — verified live</h3>
+          <p><code>curl /llms.txt</code> returns 200 with a business summary, all 8 service links, the shop link, and contact details — matches the format AI crawlers are starting to look for.</p>
         </div></div>
 
         <div class="finding"><span class="sev medium">Medium</span><div>
           <h3>No question-titled content matching how people ask AI assistants</h3>
-          <p>ChatGPT/Perplexity-style queries skew conversational — "how much does a pull-up banner cost in Kenya," "is DTF or screen printing better for a small order." The site's pricing guides already answer several of these inline, but nothing is titled as the question itself, which is the format AI answer engines quote most directly.</p>
-          <div class="fix"><b>Fix</b>See Action Plan Phase 3 — light content hub with question-phrased titles reusing existing pricing/FAQ copy almost verbatim.</div>
+          <p>Unchanged from the first audit. ChatGPT/Perplexity-style queries skew conversational — "how much does a pull-up banner cost in Kenya," "is DTF or screen printing better for a small order." The site's pricing guides already answer several of these inline, but nothing is titled as the question itself.</p>
+          <div class="fix"><b>Fix</b>See Action Plan Phase 3 — light content hub with question-phrased titles reusing existing pricing/FAQ copy almost verbatim. Highest remaining lever in this category.</div>
         </div></div>
 
         <div class="finding"><span class="sev low">Low</span><div>
-          <h3>No explicit brand-name + location pairing for disambiguation</h3>
-          <p>"Brandmark" is a common naming pattern; without consistent "Brandmark Print Media, Nairobi" pairing in titles and schema, an AI system has a harder time disambiguating this business from similarly-named ones elsewhere.</p>
-          <div class="fix"><b>Fix</b>Naturally resolved once titles/H1s/schema all carry the Nairobi qualifier per the fixes above — no separate action needed.</div>
+          <h3>No verified Google Business Profile to anchor AI-cited local answers</h3>
+          <p>Structured data now exists, but AI Overviews and Google's local answers still lean heavily on a claimed, verified Business Profile — not possible pre-launch without a public address.</p>
+          <div class="fix"><b>Fix</b>Covered in Action Plan Phase 4, blocked on the same address/domain dependency as Section 00.</div>
         </div></div>
       </section>
 
       <section class="cat" id="keywords">
         <div class="cat-head"><h2><span class="catnum">07</span>Keyword map — Google &amp; AI search</h2></div>
-        <p style="color:var(--ink-soft);margin-top:0;max-width:70ch">Primary keyword per page paired with the title-tag fix from Section 03. Secondary keywords are supporting phrases already present or easy to weave into existing body copy.</p>
+        <p style="color:var(--ink-soft);margin-top:0;max-width:70ch">Unchanged reference table from the first audit — every "recommended title tag" in the right-most column is now live on the site, verified in Section 03. Kept here for validating against Search Console query data once the domain launches.</p>
         <div class="table-scroll">
           <table class="ktable">
             <thead><tr><th style="width:15%">Page</th><th style="width:20%">Primary keyword</th><th style="width:30%">Secondary keywords</th><th style="width:35%">Recommended title tag</th></tr></thead>
@@ -483,26 +452,35 @@
       <section class="cat" id="plan" style="margin-bottom:0">
         <div class="cat-head"><h2><span class="catnum">08</span>Action plan</h2></div>
 
-        <div class="phase">
-          <div class="phase-head"><h3>Phase 1 — Critical fixes</h3><span>Week 1</span></div>
+        <div class="phase" style="opacity:.7">
+          <div class="phase-head"><h3>Phase 1 — Critical fixes</h3><span style="background:var(--good-bg);color:var(--good)">✓ Done &amp; verified</span></div>
           <ul>
-            <li>Add <code>src/app/sitemap.ts</code> and <code>src/app/robots.ts</code></li>
-            <li>Set <code>metadataBase</code> on the root layout once the domain is confirmed</li>
-            <li>Split <code>/shop</code> into a server-metadata wrapper + client grid; give <code>/cart</code> <code>noindex</code></li>
-            <li>Rewrite title/description strings for all 20 dynamic pages to include "Nairobi" (table in Section 07)</li>
+            <li>✓ <code>src/app/sitemap.ts</code> and <code>src/app/robots.ts</code> — live, 26 URLs</li>
+            <li>✓ <code>metadataBase</code> set — OG/Twitter images resolve correctly</li>
+            <li>✓ <code>/shop</code> split into server-metadata wrapper + client grid; <code>/cart</code> serves <code>noindex</code></li>
+            <li>✓ All 20 dynamic titles rewritten with "Nairobi" — confirmed in rendered HTML</li>
+          </ul>
+        </div>
+
+        <div class="phase" style="opacity:.7">
+          <div class="phase-head"><h3>Phase 2 — Structured data &amp; AI readiness</h3><span style="background:var(--good-bg);color:var(--good)">✓ Done &amp; verified</span></div>
+          <ul>
+            <li>✓ LocalBusiness JSON-LD on every page — validated</li>
+            <li>✓ FAQPage JSON-LD on home + all products + all services — validated</li>
+            <li>✓ Product JSON-LD on all 12 shop items — KES pricing confirmed correct</li>
+            <li>✓ Service JSON-LD on all 8 service pages — validated</li>
+            <li>✓ BreadcrumbList JSON-LD — validated, including new /contact page</li>
+            <li>✓ <code>public/llms.txt</code> — live, returns 200</li>
+            <li>✓ Open Graph + Twitter Card metadata — verified per-page override on products/services</li>
           </ul>
         </div>
 
         <div class="phase">
-          <div class="phase-head"><h3>Phase 2 — Structured data &amp; AI readiness</h3><span>Weeks 2–3</span></div>
+          <div class="phase-head"><h3>Phase 2.5 — Found during this re-audit</h3><span style="background:var(--good-bg);color:var(--good)">✓ Fixed today</span></div>
           <ul>
-            <li>LocalBusiness JSON-LD on the homepage (name, phone, address, areaServed)</li>
-            <li>FAQPage JSON-LD on every service page, product page, and the homepage FAQ (content already written)</li>
-            <li>Product JSON-LD on all 12 shop items (price in KES, availability)</li>
-            <li>Service JSON-LD on all 8 service pages</li>
-            <li>BreadcrumbList JSON-LD matching existing visual breadcrumbs</li>
-            <li>Add <code>public/llms.txt</code> summarizing the business, services and products with URLs</li>
-            <li>Open Graph + Twitter Card metadata (reuse product/service hero images)</li>
+            <li>✓ Wrong canonical URLs on <code>/privacy</code>, <code>/terms</code>, <code>/cart</code> — all self-canonicalize now</li>
+            <li>✓ Gallery alt text uniqueness — verified distinct per image</li>
+            <li>✓ Cross-links between related service/product pages — verified live both directions</li>
           </ul>
         </div>
 
@@ -510,10 +488,10 @@
           <div class="phase-head"><h3>Phase 3 — Content &amp; authority</h3><span>Month 2</span></div>
           <ul>
             <li>Add a real street address / area for NAP consistency and Google Business Profile setup</li>
-            <li>Weave contextual in-copy links between paired service/product pages (DTF, UV, laser-cut)</li>
-            <li>Unique alt text per service gallery image instead of one repeated string</li>
             <li>3–5 question-titled articles matching AI-search phrasing ("How much does vehicle branding cost in Nairobi?", "DTF vs screen printing — which is cheaper for a small order?")</li>
             <li>Once real orders exist: replace generic testimonials with attributed, verifiable client reviews</li>
+            <li>Optional: expand the <code>/shop</code> index page's own intro copy</li>
+            <li>Optional: <code>sameAs</code> social profile links on the LocalBusiness schema once live</li>
           </ul>
         </div>
 
@@ -522,8 +500,8 @@
           <ul>
             <li>Verify domain in Google Search Console; submit the new sitemap</li>
             <li>Set up Google Business Profile with matching NAP once a public address is confirmed</li>
-            <li>Monitor real Core Web Vitals via CrUX/GSC — this audit's performance score is a lab estimate only, no live field data existed to check against</li>
-            <li>Re-run a full crawl-based audit after deployment to validate indexing, canonical resolution and live CWV</li>
+            <li>Monitor real Core Web Vitals via CrUX/GSC — this audit's performance score is still a lab estimate, no live field data exists yet</li>
+            <li>Re-run a full crawl-based audit after deployment to validate indexing and live CWV against the real domain</li>
           </ul>
         </div>
       </section>
@@ -532,7 +510,7 @@
   </div>
 
   <div class="foot">
-    <span>Brandmark Print Media — SEO &amp; AI-Search Audit</span>
-    <span>Pre-launch review · source &amp; rendered-output based · re-run post-deployment for live crawl data</span>
+    <span>Brandmark Print Media — SEO &amp; AI-Search Audit — Re-audit #2</span>
+    <span>Pre-launch review · rendered-output + JSON-LD validated · re-run post-deployment for live crawl data</span>
   </div>
 </div>
