@@ -36,14 +36,15 @@ export function Footer() {
             <li><Link href="/shop" className="transition hover:text-cream">Shop</Link></li>
             <li><Link href="/#faq" className="transition hover:text-cream">FAQ</Link></li>
             <li><Link href="/#testimonials" className="transition hover:text-cream">Client reviews</Link></li>
+            <li><Link href="/contact" className="transition hover:text-cream">Contact us</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wide text-orange">Get in touch</h4>
           <ul className="mt-4 space-y-2 text-sm text-cream/70">
-            <li>+254 719 855331</li>
-            <li>info@brandmarkprintmedia.com</li>
+            <li><a href="tel:+254719855331" className="transition hover:text-cream">+254 719 855331</a></li>
+            <li><a href="mailto:info@brandmarkprintmedia.com" className="transition hover:text-cream">info@brandmarkprintmedia.com</a></li>
             <li>www.brandmarkprintmedia.com</li>
             <li>Nairobi, Kenya</li>
           </ul>

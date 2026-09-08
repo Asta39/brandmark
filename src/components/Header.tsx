@@ -10,7 +10,7 @@ const NAV = [
   { href: "/shop", label: "Shop" },
   { href: "/services", label: "Services" },
   { href: "/#about", label: "About" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -83,7 +83,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={() => setMenuOpen(false)}
+                onClick={() => setTimeout(() => setMenuOpen(false), 0)}
                 className="rounded-xl px-3 py-2.5 text-sm font-medium text-ink/80 hover:bg-cream"
               >
                 {item.label}
