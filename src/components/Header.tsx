@@ -5,6 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Icon } from "./Icon";
 import { useCart } from "@/lib/cart-context";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
+
+const quoteHref = buildWhatsAppLink("Hi Brandmark Print Media, I'd like to get a quote.");
 
 const NAV = [
   { href: "/shop", label: "Shop" },
@@ -54,15 +57,17 @@ export function Header() {
             )}
           </Link>
 
-          <Link
-            href="/services"
+          <a
+            href={quoteHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden items-center gap-2 rounded-full bg-ink py-2.5 pl-5 pr-2 text-sm font-semibold text-cream transition hover:bg-ink-soft md:flex"
           >
             Get a quote
             <span className="rounded-full bg-orange px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
               WhatsApp
             </span>
-          </Link>
+          </a>
 
           <button
             onClick={() => setMenuOpen((v) => !v)}
@@ -89,13 +94,15 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/services"
-              onClick={() => setMenuOpen(false)}
+            <a
+              href={quoteHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setTimeout(() => setMenuOpen(false), 0)}
               className="mt-1 rounded-xl bg-ink px-3 py-2.5 text-center text-sm font-semibold text-cream"
             >
               Get a quote
-            </Link>
+            </a>
           </nav>
         </div>
       )}
