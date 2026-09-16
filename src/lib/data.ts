@@ -2,7 +2,7 @@ export type Product = {
   slug: string;
   name: string;
   category: string;
-  price: number;
+  price: number | null;
   badge?: "NEW" | "POPULAR" | "BEST SELLING";
   metaTitle: string;
   description: string;
@@ -188,7 +188,7 @@ export const products: Product[] = [
     metaTitle: "Custom Pull-Up Banner Nairobi | Brandmark Print Media",
     name: "Custom Pull-Up Banner",
     category: "Large Format Printing",
-    price: 4500,
+    price: 7000,
     badge: "BEST SELLING",
     description: "Retractable roll-up banner stand, 85x200cm, printed on premium matte vinyl.",
     longDescription:
@@ -285,14 +285,14 @@ export const products: Product[] = [
     metaTitle: "Teardrop Flag Banners Nairobi | Brandmark Print Media",
     name: "Teardrop Flag Banner",
     category: "Outdoor Advertising",
-    price: 5500,
+    price: 6500,
     description: "Double-sided teardrop flag with cross base — built to stand out at any storefront or event.",
     longDescription:
       "A double-sided teardrop flag on a weighted cross base, built to stay upright and visible in outdoor conditions. The go-to piece for storefront promotions, product launches and activations where you need branding visible from a distance in every direction.",
     icon: "megaphone",
     images: ["/images/products/teardrop-flags.jpg"],
     specs: [
-      { label: "Height", value: "2.6m (also available in 3.4m)" },
+      { label: "Height", value: "3.5m (also available in 4.5m for KSh 7,500)" },
       { label: "Material", value: "Knitted polyester, double-sided print" },
       { label: "Base", value: "Weighted cross base, ground spike option" },
       { label: "Turnaround", value: "3–5 working days" },
@@ -317,7 +317,7 @@ export const products: Product[] = [
     metaTitle: "Branded Caps Nairobi | Corporate Gifts — Brandmark",
     name: "Branded Cap",
     category: "Promotional Materials",
-    price: 700,
+    price: 400,
     description: "Structured cotton cap, embroidered or DTF-printed logo, adjustable strap.",
     longDescription:
       "A structured six-panel cotton cap with an adjustable strap for one-size-fits-most comfort. Your logo applied by embroidery for a premium, textured finish or DTF print for full-colour detail — either way, a wardrobe staple that keeps your brand visible all day.",
@@ -406,6 +406,260 @@ export const products: Product[] = [
     ],
     relatedServiceSlug: "laser-cutting-engraving",
   },
+  {
+    slug: "telescopic-banner",
+    metaTitle: "Telescopic Banner Nairobi | Brandmark Print Media",
+    name: "Telescopic Banner",
+    category: "Large Format Printing",
+    price: 7000,
+    description: "Freestanding telescopic pole banner, 3.5m — sturdier than a pull-up stand for outdoor use.",
+    longDescription:
+      "A telescopic banner uses an adjustable freestanding pole rather than a retractable cassette, giving it better stability outdoors and in wind where a standard pull-up banner can tip. Popular for petrol stations, market activations and storefronts that need a taller, more durable stand than an indoor pull-up banner.",
+    icon: "banner",
+    images: ["/images/products/pullup-banners.jpg"],
+    specs: [
+      { label: "Height", value: "3.5m (also available in 4.5m for KSh 7,500)" },
+      { label: "Material", value: "Matte vinyl print, telescopic steel pole" },
+      { label: "Base", value: "Weighted freestanding base" },
+      { label: "Turnaround", value: "3–5 working days" },
+      { label: "Minimum order", value: "1 piece" },
+    ],
+    options: ["3.5m or 4.5m height", "Single or double-sided print"],
+    useCases: [
+      "Outdoor storefront advertising",
+      "Petrol station and forecourt branding",
+      "Market and street activations",
+      "Taller visibility than a standard pull-up banner",
+    ],
+    faqs: [
+      { q: "How is this different from a pull-up banner?", a: "A telescopic banner stands on an adjustable freestanding pole and weighted base, giving it more stability outdoors than a retractable pull-up cassette, which is better suited to indoor use." },
+      { q: "Can it handle windy conditions?", a: "Yes, the weighted base is built for outdoor stability, though very strong winds call for the double-strut option — ask when you order." },
+      { q: "What height should I choose?", a: "3.5m suits most storefronts; 4.5m is popular for roadside visibility from a distance." },
+    ],
+    relatedServiceSlug: "advertising-materials",
+  },
+  {
+    slug: "feather-flag-banner",
+    metaTitle: "Feather Flag Banner Nairobi | Brandmark Print Media",
+    name: "Feather Flag Banner",
+    category: "Outdoor Advertising",
+    price: 1800,
+    description: "Curved feather-shaped flag banner, 1.5m x 1m — compact outdoor advertising flag.",
+    longDescription:
+      "A feather flag's distinctive curved silhouette catches attention from a distance and works well in tighter spaces than a full teardrop flag. A compact, affordable option for storefront promotions, market stalls and pop-up activations.",
+    icon: "megaphone",
+    images: ["/images/products/teardrop-flags.jpg"],
+    specs: [
+      { label: "Size", value: "1.5m x 1m" },
+      { label: "Material", value: "Knitted polyester, single or double-sided print" },
+      { label: "Base", value: "Cross base, ground spike option" },
+      { label: "Turnaround", value: "3–5 working days" },
+      { label: "Minimum order", value: "1 piece" },
+    ],
+    options: ["Cross base or ground spike", "Single or double-sided print"],
+    useCases: [
+      "Market stalls and small storefronts",
+      "Retail promotions and sales events",
+      "Pop-up activations with limited space",
+      "Directional signage at events",
+    ],
+    faqs: [
+      { q: "How is a feather flag different from a teardrop flag?", a: "Feather flags have a slimmer, curved shape and are more compact — a good fit for tighter spaces where a full teardrop flag would be too wide." },
+      { q: "Can I print on both sides?", a: "Yes, single or double-sided printing is available." },
+      { q: "What base options are there?", a: "A weighted cross base for paved areas, or a ground spike for grass and soft ground." },
+    ],
+    relatedServiceSlug: "advertising-materials",
+  },
+  {
+    slug: "pop-up-display-banner",
+    metaTitle: "Pop-Up Display Banner Nairobi | Brandmark Print Media",
+    name: "Pop-Up Display Banner",
+    category: "Large Format Printing",
+    price: 11000,
+    description: "Large pop-up backdrop display, 2m x 1m — ideal for exhibitions and stage backdrops.",
+    longDescription:
+      "A large-format pop-up display frame with a tensioned fabric or vinyl graphic, built for exhibition booths, press backdrops and stage branding where a small pull-up banner isn't enough presence. The frame pops open and locks in place in minutes and folds flat for transport.",
+    icon: "banner",
+    images: ["/images/products/pullup-banners.jpg"],
+    specs: [
+      { label: "Size", value: "2m x 1m" },
+      { label: "Material", value: "Pop-up frame with tensioned print panel" },
+      { label: "Includes", value: "Carry case" },
+      { label: "Turnaround", value: "5–7 working days" },
+      { label: "Minimum order", value: "1 piece" },
+    ],
+    options: ["Custom size on request", "Curved or straight frame"],
+    useCases: [
+      "Exhibition and trade show booths",
+      "Press conference and interview backdrops",
+      "Stage and event branding",
+      "Retail launch displays",
+    ],
+    faqs: [
+      { q: "How long does it take to set up?", a: "The frame pops open and locks in place in a few minutes, no tools required." },
+      { q: "Can I get a custom size?", a: "Yes, larger or smaller backdrop sizes are available on request — send your dimensions for a quote." },
+      { q: "Does it fold down for transport?", a: "Yes, it folds flat into a padded carry case." },
+    ],
+    relatedServiceSlug: "advertising-materials",
+  },
+  {
+    slug: "fabric-backdrop-banner",
+    metaTitle: "Fabric Backdrop Banner Nairobi | Brandmark Print Media",
+    name: "Fabric Backdrop Banner",
+    category: "Large Format Printing",
+    price: 35000,
+    description: "Large fabric backdrop, 3m x 2.25m — seamless print for stage and event branding.",
+    longDescription:
+      "A wide-format fabric backdrop printed edge-to-edge with no visible seams, built for stages, step-and-repeat photo walls and large event branding where a standard banner is too small. Fabric prints fold for transport without creasing the way vinyl does.",
+    icon: "banner",
+    images: ["/images/services/posters-standees.jpg"],
+    specs: [
+      { label: "Size", value: "3m x 2.25m" },
+      { label: "Material", value: "Seamless printed fabric" },
+      { label: "Mounting", value: "Frame or wall-mount, quoted separately" },
+      { label: "Turnaround", value: "5–7 working days" },
+      { label: "Minimum order", value: "1 piece" },
+    ],
+    options: ["Custom size on request", "Frame purchase or rental"],
+    useCases: [
+      "Stage and conference backdrops",
+      "Step-and-repeat photo walls",
+      "Large event and activation branding",
+      "Exhibition hall feature walls",
+    ],
+    faqs: [
+      { q: "Does fabric crease like vinyl when folded?", a: "No, fabric prints fold and travel far better than vinyl, which is prone to creasing." },
+      { q: "Do you supply the frame too?", a: "Yes, a supporting frame can be quoted alongside the print — ask when you order." },
+      { q: "Can you match an exact size?", a: "Yes, custom sizes are available — send your dimensions for a quote." },
+    ],
+    relatedServiceSlug: "advertising-materials",
+  },
+  {
+    slug: "printed-tent",
+    metaTitle: "Printed Tent Nairobi | Branded Gazebo — Brandmark Print Media",
+    name: "Printed Tent",
+    category: "Outdoor Advertising",
+    price: 80000,
+    description: "Branded event tent, 3m x 3m — full-colour print on fabric canopy for outdoor activations.",
+    longDescription:
+      "A 3m x 3m gazebo tent with your branding printed directly onto the fabric canopy — a strong, weatherproof presence for market activations, outdoor sampling and event sponsorships where you need shelter and branding in one piece.",
+    icon: "banner",
+    images: ["/images/services/advertising-pullup.jpg"],
+    specs: [
+      { label: "Size", value: "3m x 3m" },
+      { label: "Material", value: "Printed fabric canopy, steel frame" },
+      { label: "Includes", value: "Frame, canopy and carry bag" },
+      { label: "Turnaround", value: "7–10 working days" },
+      { label: "Minimum order", value: "1 piece" },
+    ],
+    options: ["Custom size on request", "Branded side walls available"],
+    useCases: [
+      "Outdoor market activations and sampling",
+      "Event sponsorship branding",
+      "Trade fairs and expos",
+      "Pop-up retail at outdoor events",
+    ],
+    faqs: [
+      { q: "Is the canopy printed or just the frame?", a: "The canopy itself is printed with your branding, not a sticker overlay — durable through repeated setup and takedown." },
+      { q: "Can I get branded side walls too?", a: "Yes, printed side walls can be added — let us know when you order." },
+      { q: "How long does it take to set up on-site?", a: "Typically 15–20 minutes with two people once you're familiar with the frame." },
+    ],
+    relatedServiceSlug: "advertising-materials",
+  },
+  {
+    slug: "branded-table-cloth",
+    metaTitle: "Branded Table Cloth Nairobi | Brandmark Print Media",
+    name: "Branded Table Cloth",
+    category: "Promotional Materials",
+    price: null,
+    description: "Custom-printed table cloth for exhibitions, market stalls and reception desks.",
+    longDescription:
+      "A fitted or throw-style table cloth printed with your branding, sized to your table for exhibitions, market stalls or reception desks. Pricing depends on table size and fabric choice, so send us your dimensions for an exact quote.",
+    icon: "banner",
+    images: ["/images/services/print-collection.jpg"],
+    specs: [
+      { label: "Sizing", value: "Made to your table dimensions" },
+      { label: "Material", value: "Polyester twill, fitted or throw style" },
+      { label: "Turnaround", value: "5–7 working days" },
+      { label: "Minimum order", value: "1 piece" },
+    ],
+    options: ["Fitted or throw style", "Full-colour branding, any design"],
+    useCases: [
+      "Exhibition and trade show tables",
+      "Market stall branding",
+      "Reception desk covers",
+      "Registration desks at events",
+    ],
+    faqs: [
+      { q: "Why is there no fixed price?", a: "Table cloths are made to your exact table dimensions, so pricing depends on size and fabric — send us your measurements for a quote." },
+      { q: "Fitted or throw style — what's the difference?", a: "Fitted cloths hug the table shape for a tailored look; throw-style drapes loosely and fits a wider range of table sizes." },
+      { q: "How fast can I get one before an event?", a: "Standard turnaround is 5–7 working days — tell us your event date and we'll confirm feasibility." },
+    ],
+  },
+  {
+    slug: "custom-printed-tshirt",
+    metaTitle: "Custom Printed T-Shirt Nairobi | Brandmark Print Media",
+    name: "Custom Printed T-Shirt",
+    category: "Apparel Printing",
+    price: 800,
+    description: "Vinyl heat-transfer printed t-shirt — a budget-friendly option for single-colour designs.",
+    longDescription:
+      "A straightforward vinyl heat-transfer print on a cotton tee — the most budget-friendly way to get a clean, single or two-colour logo onto a shirt. For full-colour, photo-quality designs, see our DTF-printed t-shirt instead; vinyl suits simple logo or text designs best.",
+    icon: "shirt",
+    images: ["/images/products/dtf-tshirt-black-tropical.jpg"],
+    specs: [
+      { label: "Material", value: "100% cotton tee" },
+      { label: "Print method", value: "Vinyl heat transfer" },
+      { label: "Sizes", value: "XS – 3XL" },
+      { label: "Turnaround", value: "2–4 working days" },
+      { label: "Minimum order", value: "1 piece" },
+    ],
+    options: ["Any size", "Front, back or sleeve print"],
+    useCases: [
+      "Team or event t-shirts on a budget",
+      "Simple one or two-colour logo designs",
+      "Bulk staff uniform orders",
+      "Quick-turnaround small batches",
+    ],
+    faqs: [
+      { q: "Vinyl or DTF — which should I choose?", a: "Vinyl suits simple, single or two-colour logos at a lower price; DTF is better for full-colour or photographic designs. See our Custom DTF T-Shirt for that option." },
+      { q: "Is there a minimum order?", a: "No, we print single pieces and bulk orders on the same line." },
+      { q: "Can I mix sizes in one order?", a: "Yes, specify sizes and quantities when you order." },
+    ],
+    relatedServiceSlug: "dtf-printing",
+  },
+  {
+    slug: "custom-printed-hoodie",
+    metaTitle: "Custom Printed Hoodie Nairobi | Brandmark Print Media",
+    name: "Custom Printed Hoodie",
+    category: "Apparel Printing",
+    price: 2300,
+    description: "Custom-branded pullover hoodie — full-colour print or embroidered logo.",
+    longDescription:
+      "A heavyweight pullover hoodie with your logo printed or embroidered on the chest or back — a popular choice for staff uniforms, team merchandise and corporate gifting through Nairobi's cooler months.",
+    icon: "shirt",
+    images: ["/images/products/dtf-tshirt-purple.jpg"],
+    specs: [
+      { label: "Material", value: "Heavyweight cotton-blend fleece" },
+      { label: "Print method", value: "DTF print or embroidery" },
+      { label: "Sizes", value: "S – 3XL" },
+      { label: "Turnaround", value: "3–5 working days" },
+      { label: "Minimum order", value: "1 piece" },
+    ],
+    options: ["Any size", "Printed or embroidered logo", "Front, back or sleeve placement"],
+    useCases: [
+      "Staff uniforms and field-team branding",
+      "Corporate gifting sets",
+      "Team and event merchandise",
+      "Retail merchandise line",
+    ],
+    faqs: [
+      { q: "Printed or embroidered — which is better?", a: "Embroidery gives a premium textured finish for simple logos; DTF print suits full-colour or detailed designs." },
+      { q: "What sizes are available?", a: "S through 3XL are standard; larger sizes on request for bulk orders." },
+      { q: "Is there a bulk discount?", a: "Yes, pricing improves at 20+ units — send your quantity for a quote." },
+    ],
+    relatedServiceSlug: "dtf-printing",
+  },
 ];
 
 export type Service = {
@@ -437,7 +691,14 @@ export const services: Service[] = [
       "Your storefront is your first impression. We design, fabricate and install everything from backlit 3D lettering and shop fascias to directional and wayfinding signage — built to survive Nairobi's weather and installed by our own crew, not a subcontractor.",
     extendedDescription:
       "Most businesses lose walk-in customers before they ever step through the door, simply because their signage doesn't hold up — faded acrylic, flickering lights, lettering that peeled off after one rainy season. We build signage the way we'd want it built for our own shop: rust-resistant frames, weatherproof LED modules for backlit letters, and UV-stable vinyl and paint so colours don't wash out under equatorial sun. Every job starts with a physical site visit, not a guess from photos, because a fascia that looks right on screen can look wrong once it's up against your actual wall, parking layout and street sightlines. We also handle the boring-but-critical parts most sign shops skip: county approvals for oversized or illuminated signage, safe scaffolding and rigging for elevated installs, and electrical wiring for backlit units done by a qualified technician, not a printer with a drill.",
-    points: ["3D & backlit lettering", "Shop fascia branding", "Wayfinding & directional signs"],
+    points: [
+      "3D & backlit lettering",
+      "2D signage, lit or unlit",
+      "Reverse-lit & stand-alone signage",
+      "Shop fascia branding",
+      "Reception, road & directory signage",
+      "Wayfinding & directional signs",
+    ],
     whoFor: [
       "New storefronts needing fascia signage before opening day",
       "Rebrands replacing outdated or damaged signage",
@@ -742,7 +1003,13 @@ export const services: Service[] = [
       "Our CNC laser cuts and engraves wood, acrylic and select metals with fine detail impossible by hand — office signage, awards, decor pieces and intricate wall art, all produced in-house to your exact specification.",
     extendedDescription:
       "A laser cutter reads your design as a vector file and burns or cuts along that exact path, which means fine detail that would be tedious or impossible to replicate by hand — thin bridges in lettering, intricate silhouette art, consistent engraving depth across dozens of identical awards — comes out identical every time. We work primarily in MDF and birch plywood, cast acrylic, and select thin-gauge metals, choosing material based on whether the piece needs to survive outdoors (acrylic, treated wood) or is purely decorative indoors (raw wood, engraved detail). Any logo or artwork can be converted into a cut-ready vector file by our design team if you don't already have one, and we always send a proof of the exact cut lines before committing material to the laser.",
-    points: ["Wood & acrylic signage", "Awards & plaques", "Custom decor pieces"],
+    points: [
+      "Wood & acrylic signage",
+      "Awards, plaques & tile plaques",
+      "Stamps & company seals",
+      "Leather & flask labelling",
+      "Custom decor pieces",
+    ],
     whoFor: [
       "Offices wanting a reception or meeting-room logo sign",
       "Event organisers needing custom awards or trophies",

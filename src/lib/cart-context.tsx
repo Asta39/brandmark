@@ -12,6 +12,7 @@ type CartContextValue = {
   lines: CartLine[];
   itemCount: number;
   subtotal: number;
+  hasInquiryItems: boolean;
   addItem: (slug: string, qty?: number) => void;
   removeItem: (slug: string) => void;
   setQty: (slug: string, qty: number) => void;
@@ -80,7 +81,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const itemCount = useMemo(() => lines.reduce((sum, l) => sum + l.qty, 0), [lines]);
   const subtotal = useMemo(
-    () => itemsWithProduct.reduce((sum, { product, qty }) => sum + product.price * qty, 0),
+    () => itemsWithProduct.reduce((sum, { product, qty }) => sum + (product.price ?? 0) * qty, 0),
+    [itemsWithProduct],
+  );
+  const hasInquiryItems = useMemo(
+    () => itemsWithProduct.some(({ product }) => product.price === null),
     [itemsWithProduct],
   );
 
@@ -88,6 +93,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     lines,
     itemCount,
     subtotal,
+    hasInquiryItems,
     addItem,
     removeItem,
     setQty,

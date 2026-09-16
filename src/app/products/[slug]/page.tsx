@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products, services } from "@/lib/data";
-import { formatKsh } from "@/lib/whatsapp";
+import { formatPrice } from "@/lib/whatsapp";
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductPurchasePanel } from "@/components/ProductPurchasePanel";
 import { ProductCard } from "@/components/ProductCard";
@@ -74,7 +74,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           )}
           <span className="mt-2 block text-xs font-semibold uppercase tracking-wide text-orange">{product.category}</span>
           <h1 className="mt-1 text-3xl font-bold tracking-tight text-ink">{product.name}</h1>
-          <p className="mt-3 text-2xl font-bold text-ink">{formatKsh(product.price)}</p>
+          <p className="mt-3 text-2xl font-bold text-ink">{formatPrice(product.price)}</p>
           <p className="mt-4 text-sm leading-relaxed text-ink/65">{product.longDescription}</p>
 
           <div className="mt-6">

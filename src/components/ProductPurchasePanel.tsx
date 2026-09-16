@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useCart } from "@/lib/cart-context";
-import { buildWhatsAppLink, formatKsh } from "@/lib/whatsapp";
+import { buildWhatsAppLink, formatPrice } from "@/lib/whatsapp";
 import { Icon } from "./Icon";
 import type { Product } from "@/lib/data";
 
@@ -20,7 +20,7 @@ export function ProductPurchasePanel({ product }: { product: Product }) {
   };
 
   const askHref = buildWhatsAppLink(
-    `Hi Brandmark Print Media, I'd like to ask about "${product.name}" (${formatKsh(product.price)}). Qty: ${qty}.`,
+    `Hi Brandmark Print Media, I'd like to ask about "${product.name}" (${formatPrice(product.price)}). Qty: ${qty}.`,
   );
 
   return (

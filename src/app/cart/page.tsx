@@ -8,14 +8,18 @@ import { buildWhatsAppLink, formatKsh } from "@/lib/whatsapp";
 import { Icon } from "@/components/Icon";
 
 export default function CartPage() {
-  const { itemsWithProduct, subtotal, setQty, removeItem, clear } = useCart();
+  const { itemsWithProduct, subtotal, hasInquiryItems, setQty, removeItem, clear } = useCart();
   const [step, setStep] = useState<"cart" | "sent">("cart");
   const [form, setForm] = useState({ name: "", phone: "", email: "", delivery: "pickup", address: "", notes: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const itemLines = itemsWithProduct
-      .map(({ product, qty }) => `• ${product.name} x${qty} — ${formatKsh(product.price * qty)}`)
+      .map(({ product, qty }) =>
+        product.price === null
+          ? `• ${product.name} x${qty} — price on request`
+          : `• ${product.name} x${qty} — ${formatKsh(product.price * qty)}`,
+      )
       .join("\n");
 
     const message = [
@@ -23,7 +27,7 @@ export default function CartPage() {
       "",
       itemLines,
       "",
-      `Subtotal: ${formatKsh(subtotal)}`,
+      `Subtotal: ${formatKsh(subtotal)}${hasInquiryItems ? " + items priced on request" : ""}`,
       "",
       `Name: ${form.name}`,
       `Phone: ${form.phone}`,
@@ -93,9 +97,13 @@ export default function CartPage() {
                         <h3 className="mt-0.5 text-sm font-bold text-ink transition hover:text-orange">{product.name}</h3>
                       </Link>
                     </div>
-                    <span className="text-sm font-bold text-ink">{formatKsh(product.price * qty)}</span>
+                    <span className="text-sm font-bold text-ink">
+                      {product.price === null ? "Inquire" : formatKsh(product.price * qty)}
+                    </span>
                   </div>
-                  <p className="mt-1 text-xs text-ink/50">{formatKsh(product.price)} each</p>
+                  <p className="mt-1 text-xs text-ink/50">
+                    {product.price === null ? "Price on request" : `${formatKsh(product.price)} each`}
+                  </p>
                   <div className="mt-auto flex items-center gap-3 pt-3">
                     <div className="flex items-center rounded-full border border-line">
                       <button
@@ -138,6 +146,11 @@ export default function CartPage() {
               <span className="text-ink/60">Subtotal</span>
               <span className="font-semibold text-ink">{formatKsh(subtotal)}</span>
             </div>
+            {hasInquiryItems && (
+              <p className="mt-1 text-xs font-medium text-orange">
+                + one or more items priced on request — we&apos;ll confirm on WhatsApp
+              </p>
+            )}
             <p className="mt-1 text-xs text-ink/45">Delivery fee confirmed on WhatsApp based on your location.</p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4 border-t border-line pt-5">

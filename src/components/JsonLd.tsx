@@ -75,14 +75,16 @@ export function ProductJsonLd({ product }: { product: Product }) {
           "@type": "Brand",
           name: "Brandmark Print Media",
         },
-        offers: {
-          "@type": "Offer",
-          url: `${SITE_URL}/products/${product.slug}`,
-          priceCurrency: "KES",
-          price: product.price,
-          availability: "https://schema.org/InStock",
-          areaServed: "Nairobi, Kenya",
-        },
+        ...(product.price !== null && {
+          offers: {
+            "@type": "Offer",
+            url: `${SITE_URL}/products/${product.slug}`,
+            priceCurrency: "KES",
+            price: product.price,
+            availability: "https://schema.org/InStock",
+            areaServed: "Nairobi, Kenya",
+          },
+        }),
       }}
     />
   );

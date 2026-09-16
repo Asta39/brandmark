@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { formatKsh } from "@/lib/whatsapp";
+import { formatPrice } from "@/lib/whatsapp";
 import { useCart } from "@/lib/cart-context";
 import type { Product } from "@/lib/data";
 
@@ -46,7 +46,9 @@ export function ProductCard({ product }: { product: Product }) {
         </Link>
         <p className="mt-1.5 flex-1 text-xs leading-relaxed text-ink/55">{product.description}</p>
         <div className="mt-4 flex items-center justify-between">
-          <span className="text-base font-bold text-ink">{formatKsh(product.price)}</span>
+          <span className={`font-bold text-ink ${product.price === null ? "text-xs" : "text-base"}`}>
+            {formatPrice(product.price)}
+          </span>
           <button
             onClick={handleAdd}
             className="rounded-full bg-ink px-4 py-2 text-xs font-bold text-cream transition hover:bg-orange"
