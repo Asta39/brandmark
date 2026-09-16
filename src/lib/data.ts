@@ -416,7 +416,7 @@ export const products: Product[] = [
     longDescription:
       "A telescopic banner uses an adjustable freestanding pole rather than a retractable cassette, giving it better stability outdoors and in wind where a standard pull-up banner can tip. Popular for petrol stations, market activations and storefronts that need a taller, more durable stand than an indoor pull-up banner.",
     icon: "banner",
-    images: ["/images/products/pullup-banners.jpg"],
+    images: ["/images/products/telescopic-banner.jpg"],
     specs: [
       { label: "Height", value: "3.5m (also available in 4.5m for KSh 7,500)" },
       { label: "Material", value: "Matte vinyl print, telescopic steel pole" },
@@ -448,7 +448,7 @@ export const products: Product[] = [
     longDescription:
       "A feather flag's distinctive curved silhouette catches attention from a distance and works well in tighter spaces than a full teardrop flag. A compact, affordable option for storefront promotions, market stalls and pop-up activations.",
     icon: "megaphone",
-    images: ["/images/products/teardrop-flags.jpg"],
+    images: ["/images/products/feather-flag.jpg"],
     specs: [
       { label: "Size", value: "1.5m x 1m" },
       { label: "Material", value: "Knitted polyester, single or double-sided print" },
@@ -480,7 +480,7 @@ export const products: Product[] = [
     longDescription:
       "A large-format pop-up display frame with a tensioned fabric or vinyl graphic, built for exhibition booths, press backdrops and stage branding where a small pull-up banner isn't enough presence. The frame pops open and locks in place in minutes and folds flat for transport.",
     icon: "banner",
-    images: ["/images/products/pullup-banners.jpg"],
+    images: ["/images/products/popup-display-banner.jpg"],
     specs: [
       { label: "Size", value: "2m x 1m" },
       { label: "Material", value: "Pop-up frame with tensioned print panel" },
@@ -512,7 +512,7 @@ export const products: Product[] = [
     longDescription:
       "A wide-format fabric backdrop printed edge-to-edge with no visible seams, built for stages, step-and-repeat photo walls and large event branding where a standard banner is too small. Fabric prints fold for transport without creasing the way vinyl does.",
     icon: "banner",
-    images: ["/images/services/posters-standees.jpg"],
+    images: ["/images/products/fabric-backdrop.jpg"],
     specs: [
       { label: "Size", value: "3m x 2.25m" },
       { label: "Material", value: "Seamless printed fabric" },
@@ -544,7 +544,7 @@ export const products: Product[] = [
     longDescription:
       "A 3m x 3m gazebo tent with your branding printed directly onto the fabric canopy — a strong, weatherproof presence for market activations, outdoor sampling and event sponsorships where you need shelter and branding in one piece.",
     icon: "banner",
-    images: ["/images/services/advertising-pullup.jpg"],
+    images: ["/images/products/printed-tent.jpg"],
     specs: [
       { label: "Size", value: "3m x 3m" },
       { label: "Material", value: "Printed fabric canopy, steel frame" },
@@ -576,7 +576,7 @@ export const products: Product[] = [
     longDescription:
       "A fitted or throw-style table cloth printed with your branding, sized to your table for exhibitions, market stalls or reception desks. Pricing depends on table size and fabric choice, so send us your dimensions for an exact quote.",
     icon: "banner",
-    images: ["/images/services/print-collection.jpg"],
+    images: ["/images/products/table-cloth.jpg"],
     specs: [
       { label: "Sizing", value: "Made to your table dimensions" },
       { label: "Material", value: "Polyester twill, fitted or throw style" },
@@ -606,7 +606,7 @@ export const products: Product[] = [
     longDescription:
       "A straightforward vinyl heat-transfer print on a cotton tee — the most budget-friendly way to get a clean, single or two-colour logo onto a shirt. For full-colour, photo-quality designs, see our DTF-printed t-shirt instead; vinyl suits simple logo or text designs best.",
     icon: "shirt",
-    images: ["/images/products/dtf-tshirt-black-tropical.jpg"],
+    images: ["/images/products/vinyl-tshirt.jpg"],
     specs: [
       { label: "Material", value: "100% cotton tee" },
       { label: "Print method", value: "Vinyl heat transfer" },
@@ -638,7 +638,7 @@ export const products: Product[] = [
     longDescription:
       "A heavyweight pullover hoodie with your logo printed or embroidered on the chest or back — a popular choice for staff uniforms, team merchandise and corporate gifting through Nairobi's cooler months.",
     icon: "shirt",
-    images: ["/images/products/dtf-tshirt-purple.jpg"],
+    images: ["/images/products/hoodie.jpg"],
     specs: [
       { label: "Material", value: "Heavyweight cotton-blend fleece" },
       { label: "Print method", value: "DTF print or embroidery" },
